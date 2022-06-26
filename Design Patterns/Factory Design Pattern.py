@@ -1,5 +1,5 @@
 from abc import ABCMeta, abstractstaticmethod
-
+# Factory class is encouraged to be singleton to avoid loading or creating the factory class everytime i.e., create new instance.
 class ISubject(metaclass=ABCMeta):
     @abstractstaticmethod
     def subject(self):
@@ -37,3 +37,4 @@ if (__name__ == "__main__"):
     sub = SubFactory.Creator(choice)
     if(sub != -1):
         sub.subject()
+# used with the integration of SOLID principles
